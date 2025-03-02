@@ -9,10 +9,10 @@ class STTService:
         print(f"🚀 加載 Whisper 模型: {model_size}")
         self.model = whisper.load_model(model_size)
 
-    def transcribe_audio(self, wav_stream: BytesIO, language="zh") -> str:
+    def transcribe_audio(self, wav_stream: BytesIO) -> str:
         """接收 WAV 格式音訊 (BytesIO)，並使用 Whisper 轉錄"""
         try:
-            print(f"🎙️ [DEBUG] Whisper 轉錄中... 語言: {language}")
+            print(f"🎙️ [DEBUG] Whisper 轉錄中...")
 
             # 讀取 BytesIO 內的 WAV，轉為 NumPy 陣列
             wav_stream.seek(0)  # 重新定位到檔案開頭
@@ -21,7 +21,7 @@ class STTService:
             print(f"✅ [DEBUG] 音訊轉換成功: {audio_data.shape}, 取樣率: {sample_rate}")
 
             # 🎤 Whisper 轉錄音訊
-            result = self.model.transcribe(audio_data, language=language)
+            result = self.model.transcribe(audio_data)
             print(f"✅ [Whisper Output]: {result['text']}")
 
             return result["text"]
