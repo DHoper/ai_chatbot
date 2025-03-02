@@ -76,11 +76,4 @@ frontend/.vite/
 frontend/*.log
 
 # ⚙️ 環境設定
-backend/.env.local
-backend/.env.development.local
-backend/.env.test.local
-backend/.env.production.local
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
+*.env
