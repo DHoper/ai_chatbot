@@ -5,7 +5,7 @@ FROM python:3.10
 WORKDIR /app
 
 # 複製專案檔案
-COPY ./app /app
+COPY . /app
 
 # 安裝依賴
 RUN pip install --no-cache-dir --upgrade pip \
