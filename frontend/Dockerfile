@@ -1,8 +1,8 @@
 # 1️⃣ 使用 Node.js 來建置前端
 FROM node:18 AS build
 
-# 2️⃣ 設定工作目錄到 /app
-WORKDIR /app
+# 2️⃣ 設定工作目錄為 frontend
+WORKDIR /frontend
 
 # 3️⃣ 複製 package.json 和 package-lock.json 來快取依賴
 COPY package.json package-lock.json ./
@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # 8️⃣ 複製前端建置完成的檔案到 Nginx 伺服器
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /frontend/dist /usr/share/nginx/html
 
 # 9️⃣ 暴露 Nginx 80 端口
 EXPOSE 80
