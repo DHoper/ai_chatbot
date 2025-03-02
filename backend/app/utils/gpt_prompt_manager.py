@@ -2,7 +2,7 @@ import json
 import os
 
 class GPTPromptManager:
-    def __init__(self, prompt_file="app/utils/gpt_prompts.json"):
+    def __init__(self, prompt_file="utils/gpt_prompts.json"):
         """初始化 GPT Prompt 管理器"""
         self.prompt_file = prompt_file
         self.prompts = self._load_prompts()
