@@ -1,0 +1,86 @@
+# 🐍 Python (FastAPI 後端)
+backend/.venv/
+backend/.env
+backend/__pycache__/
+backend/**/*.pyc
+backend/**/*.pyo
+backend/**/*.pyd
+backend/Python
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+
+# 🚀 FastAPI & Uvicorn 日誌
+backend/logs/
+backend/*.log
+backend/nohup.out
+
+# 📁 Whisper 下載的模型
+backend/whisper_cache/
+backend/whisper_models/
+backend/whisper_large.bin
+backend/whisper_medium.bin
+backend/whisper_small.bin
+backend/whisper_tiny.bin
+backend/whisper_base.bin
+
+# 🔥 PyTorch 快取與模型
+backend/__pycache__/
+backend/**/*.pt
+backend/**/*.pth
+backend/torch_cache/
+backend/**/*.onnx
+backend/**/*.trt
+
+# 📦 FastAPI 靜態文件 & 上傳文件
+backend/static/
+backend/media/
+backend/uploads/
+backend/tmp/
+backend/temp/
+
+# 🐳 Docker 相關
+docker-compose.override.yml
+Dockerfile~
+*.dockerfile
+*.swp
+*~ 
+
+# 🖥️ VSCode 設定檔案
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/*.code-workspace
+
+# 🍎 macOS
+.DS_Store
+
+# 🖥️ Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 🐧 Linux
+*.swp
+*.swo
+*~
+
+# ⚛️ 前端 (React + Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.cache/
+frontend/.yarn/
+frontend/.pnpm-store/
+frontend/.vite/
+frontend/*.log
+
+# ⚙️ 環境設定
+backend/.env.local
+backend/.env.development.local
+backend/.env.test.local
+backend/.env.production.local
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
