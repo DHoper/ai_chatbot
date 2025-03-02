@@ -1,5 +1,5 @@
 from openai import OpenAI
-from app.utils.gpt_prompt_manager import GPTPromptManager
+from utils.gpt_prompt_manager import GPTPromptManager
 
 
 # 創建 OpenAI 客戶端

@@ -1,4 +1,4 @@
-from app.services.openai_client import OpenAIClient
+from services.openai_client import OpenAIClient
 from io import BytesIO
 
 # ✅ **取得共用 OpenAI 客戶端**

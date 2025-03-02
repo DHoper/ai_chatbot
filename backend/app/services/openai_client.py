@@ -1,5 +1,5 @@
 from openai import OpenAI
-from app.config import OPENAI_API_KEY
+from config import OPENAI_API_KEY
 
 # ✅ **統一管理 OpenAI API 初始化**
 class OpenAIClient:
