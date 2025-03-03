@@ -17,7 +17,7 @@ const ScenarioCard: React.FC<ScenarioCardProps> = ({ image, title, description, 
       onClick={onClick}
     >
       <div className="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-200">
-        <figure className="h-48 sm:h-40 w-full">
+        <figure className="h-fit w-full">
           <img src={image} alt={title} className="object-cover w-full h-full" />
         </figure>
         <div className="card-body text-center p-4">

@@ -17,7 +17,7 @@ const ScenarioSelector: React.FC<{ onSelect: (selection: ScenarioSelection) => v
   return (
     <div className="p-6 mx-auto h-full overflow-hidden bg-sky-400">
       <h2 className="text-2xl font-bold text-center mb-6 text-white">請選擇對話場景</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 h-full overflow-auto pb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 h-full overflow-auto px-8 pt-4 pb-12">
         {scenarios.map((scenario) => (
           <ScenarioCard
             key={scenario.id}
