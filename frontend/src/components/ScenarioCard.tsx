@@ -23,7 +23,7 @@ const ScenarioCard: React.FC<ScenarioCardProps> = ({ image, title, description, 
         <div className="card-body text-center p-4">
           <h3 className="card-title text-lg font-semibold">{title}</h3>
           <p className="text-sm text-gray-500">{description}</p>
-          <button className="btn btn-primary btn-sm mt-2">選擇場景</button>
+          <button className="btn btn-info btn-sm mt-2 text-black">選擇場景</button>
         </div>
       </div>
     </motion.div>

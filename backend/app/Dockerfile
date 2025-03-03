@@ -4,6 +4,9 @@ FROM python:3.10
 # 設定工作目錄
 WORKDIR /app
 
+# 安裝 ffmpeg
+RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
+
 # 複製專案檔案
 COPY . /app
 
