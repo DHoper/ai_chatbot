@@ -15,9 +15,9 @@ export interface ScenarioSelection {
 
 const ScenarioSelector: React.FC<{ onSelect: (selection: ScenarioSelection) => void }> = ({ onSelect }) => {
   return (
-    <div className="p-6 max-w-screen-lg mx-auto">
-      <h2 className="text-2xl font-bold text-center mb-6 text-primary">請選擇對話場景</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="p-6 mx-auto h-full overflow-hidden bg-sky-400">
+      <h2 className="text-2xl font-bold text-center mb-6 text-white">請選擇對話場景</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 h-full overflow-auto pb-12">
         {scenarios.map((scenario) => (
           <ScenarioCard
             key={scenario.id}
@@ -30,8 +30,8 @@ const ScenarioSelector: React.FC<{ onSelect: (selection: ScenarioSelection) => v
                 mode: scenario.mode,
                 topic: scenario.topic,
                 ai_persona: scenario.ai_persona,
-                voice_accent: "american",
-                voice_gender: "male",
+                voice_accent: scenario.voice_accent,
+                voice_gender: scenario.voice_gender,
                 ai_avatar : scenario.ai_avatar,
                 scenario_image : scenario.scenario_image
               })

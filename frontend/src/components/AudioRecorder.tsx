@@ -23,7 +23,7 @@ const AudioRecorder: React.FC<AudioRecorderProps> = ({ onAudioReady, disabled = 
                 whileTap={{ scale: disabled ? 1.0 : 0.9 }}   // 禁用時不變化
                 onClick={!disabled ? (isRecording ? stopRecording : startRecording) : undefined}
                 className={`w-16 h-16 rounded-full flex items-center justify-center text-white font-bold transition-all duration-300 shadow-lg ${
-                    isRecording ? "bg-red-500 animate-pulse" : "bg-blue-500"
+                    isRecording ? "bg-red-500 animate-pulse" : "bg-white"
                 } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`} // ✅ 禁用時透明度降低
                 disabled={disabled} // ✅ 確保按鈕真的被禁用
             >
@@ -31,7 +31,7 @@ const AudioRecorder: React.FC<AudioRecorderProps> = ({ onAudioReady, disabled = 
             </motion.button>
 
             {/* 錄音中顯示動畫 */}
-            {isRecording && <span className="loading loading-ring loading-lg text-red-500 mt-4"></span>}
+            {/* {isRecording && <span className="loading loading-ring loading-lg text-red-500 mt-4"></span>} */}
         </div>
     );
 };
