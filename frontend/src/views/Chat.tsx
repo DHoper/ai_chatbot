@@ -86,7 +86,10 @@ const Chat: React.FC = () => {
                     <div className="flex items-center justify-between bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-4">
                         <button
                             className="flex items-center gap-2 btn btn-outline btn-sm text-white border-white hover:bg-white hover:text-indigo-500"
-                            onClick={() => setSelectedScenario(null)}
+                            onClick={() => {
+                                setSelectedScenario(null);
+                                setMessages([]); // ✅ 清空對話紀錄
+                            }}
                         >
                             <ArrowLeftIcon className="w-5 h-5" />
                         </button>
